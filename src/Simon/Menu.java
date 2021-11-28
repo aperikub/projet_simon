@@ -1,5 +1,6 @@
 package Simon;
 
+
 import javax.swing.*;
 import java.awt.*;
 
@@ -17,17 +18,24 @@ public class Menu extends JMenuBar {
         rollMenuSub1 = new JMenuItem("facile");
         rollMenuSub2 = new JMenuItem("moyen");
         rollMenuSub3 = new JMenuItem("difficile");
-        rollMenuSub4 = new JMenuItem("cauchemar");
+        rollMenuSub4 = new JMenuItem("menu principal");
         rollMenu.setOpaque(true);
         //rollMenu.setBackground(Color.CYAN);
 
         rollMenu.add(rollMenuSub1);
         rollMenu.add(rollMenuSub2);
         rollMenu.add(rollMenuSub3);
-        rollMenu.add(rollMenuSub4);
+
         this.add(rollMenu);
 
-        //rollMenuSub1.addActionListener();
+
+    }
+    public void GameMenu(){
+        rollMenu.remove(rollMenuSub1);
+        rollMenu.remove(rollMenuSub2);
+        rollMenu.remove(rollMenuSub3);
+        rollMenu.updateUI();
+        rollMenu.add(rollMenuSub4);
     }
 
     public JMenu getRollMenu() {
